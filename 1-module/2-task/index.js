@@ -9,8 +9,17 @@ function print(text) {
  * Эту функцию нужно поменять так,
  * чтобы функция sayHello работала корректно
  */
-function isValid(name) {
-  // ваш код...
+ function isValid(name) {
+  var nameString = name;
+  if(typeof nameString === 'object'){
+    return false;
+  }else if(nameString.indexOf(' ') !== -1){
+    return false;
+  }else if(nameString.length < 4 ){
+    return false;
+  }else{
+    return true;
+  }
 }
 
 function sayHello() {
