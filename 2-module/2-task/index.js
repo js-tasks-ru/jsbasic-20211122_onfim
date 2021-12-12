@@ -1,3 +1,8 @@
 function isEmpty(obj) {
-  // ваш код...
+  for (var i in obj) {
+    if (obj.hasOwnProperty(i)) {
+        return false;
+    }
+}
+return true;
 }
